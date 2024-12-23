@@ -7,11 +7,11 @@
                     <span aria-hidden="true">«</span>
                 </button>
             @else
-                <a href="{{ $paginator->previousPageUrl() }}" class="join-item btn" rel="prev" aria-label="@lang('pagination.previous')">
+                <a href="{{ $paginator->previousPageUrl() }}" class="join-item btn" rel="prev"
+                    aria-label="@lang('pagination.previous')">
                     «
                 </a>
             @endif
-
             {{-- Pagination Elements --}}
             @foreach ($elements as $element)
                 {{-- "Three Dots" Separator --}}
@@ -20,7 +20,6 @@
                         {{ $element }}
                     </button>
                 @endif
-
                 {{-- Array Of Links --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
@@ -36,10 +35,10 @@
                     @endforeach
                 @endif
             @endforeach
-
             {{-- Next Page Link --}}
             @if ($paginator->hasMorePages())
-                <a class="join-item btn" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">
+                <a class="join-item btn" href="{{ $paginator->nextPageUrl() }}" rel="next"
+                    aria-label="@lang('pagination.next')">
                     »
                 </a>
             @else
